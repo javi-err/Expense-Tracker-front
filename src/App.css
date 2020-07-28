@@ -1,38 +1,70 @@
-.App {
-  text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+* {
+    box-sizing: border-box;
   }
-}
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
+  
 
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+  body {
+      display: flex;
+      flex-direction: column;
+      justify-self: center;
+      align-items: center;
+      background-color: rgb(233, 233, 233);
   }
-  to {
-    transform: rotate(360deg);
+
+
+  .header {
+      text-align: center;
   }
+
+  .balance-left {
+      text-align: center;
+  }
+
+  .balance-left  p {
+      margin-top: 10px;
+      background-color: white;
+      padding: 10px;
+      box-shadow:-1px -1px 4px #bebebe inset;
+      border-radius: 10px;
+  }
+
+  .balance-amount-container, .income-amount-container, .expense-amount-container {
+    border-top: 1px solid #bebebe;
+    padding-top: 10px;
+    margin-bottom: 20px;
+  }
+
+  .transaction-history-container {
+    margin-left: -45px;
+    padding-top: 10px;
+  }
+  
+  .history h2 {
+      border-bottom: 1px #bebebe solid;
+      padding-bottom: 10px;
+  }
+
+  .transaction-form-container {
+    margin-left: -6px;
+    padding-top: 10px;
+  }
+
+  .transaction-form-container h2 {
+      border-bottom: 1px #bebebe solid;
+      padding-bottom: 10px;
+  }
+
+  li {
+    list-style: none;
+}
+
+  label {
+    display: inline-block;
+    width: 200px;
+    margin-bottom: 20px;
+  }
+
+  button {
+    color: white;
 }
