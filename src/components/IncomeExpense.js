@@ -1,6 +1,13 @@
-import React from 'react'
+import React, {useContext} from 'react'
+import { GlobalContext } from '../context/GlobalState'
+
 
 export const IncomeExpense = () => {
+
+    const {transactions} = useContext(GlobalContext); 
+    
+    const amounts = transactions.map(transaction => transaction.amount)
+    
     return (
         <section className="income-expense-container">
             <div className="income-container">
