@@ -91,11 +91,3 @@
 .t-text {
   width: 4%;
 }
-
-.positive-glow {
-  box-shadow: -1px 0px 12px 2px green;
-}
-
-.negative-glow {
-  box-shadow: -1px 0px 12px 2px red;
-}

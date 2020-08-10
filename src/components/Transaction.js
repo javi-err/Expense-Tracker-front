@@ -1,39 +1,20 @@
-import React, { Component } from 'react'
+import React, {useContext} from 'react'
+import { GlobalContext } from '../context/GlobalState';
 
-export class Transaction extends Component {
-    constructor(props) {
-        super(props);
-        this.state = {
-            isAmountPositive: true
-        };
-    }
+export const Transaction = ({transaction}) => {
+    const {deleteTransaction} = useContext(GlobalContext);
+    const sign = transaction.amount < 0 ? '-' : '+';
 
 
-    negative = () => {
-        this.props.transaction.amount < 0 ? this.setState({isAmountPositive : false}) : this.setState({isAmountPositive : true})
-    }
-
-    componentDidMount() {
-        this.negative();
-    }
-    render() {
+    return (
         
-        const sign = this.props.transaction.amount < 0 ? '-' : '+';
-        let className = '';
-            if(this.state.isAmountPositive) {
-                className += 'positive-glow'
-            }
-            else {
-                className += 'negative-glow'
-            }
-        return (
-            <div className = {className}>
-            <li className="negative"><div className="t-text">{this.props.transaction.text}</div>
-            <span>{sign}${Math.abs(this.props.transaction.amount)}</span>
-            <button className ="delete-btn">x</button></li> 
+            <div style = {{boxShadow: sign === '+' ? "-1px 0px 12px 2px green" : "-1px 0px 12px 2px red"}}>
+            <li className="negative"><div className="t-text">{transaction.text}</div>
+            <span>{sign}${Math.abs(transaction.amount)}</span>
+            <button onClick = {() => deleteTransaction(transaction.id)} className ="delete-btn">x</button></li> 
             </div>
         )
-    }
+
 }
 
-export default Transaction
+
