@@ -86,8 +86,22 @@
   box-shadow: -1px -1px 4px #bebebe inset;
   border-radius: 10px;
   line-height: 5px;
+  text-align: center;
 }
 
 .t-text {
-  width: 4%;
+  width: 120px;
+}
+
+.amount {
+  text-align: center;
+  font-size: 1.5em
+}
+
+button#btn {
+  background-color: #008029a8;
+  color: white;
+  padding: 10px;
+  width: 400px;
+  font-size: 20px;
 }
