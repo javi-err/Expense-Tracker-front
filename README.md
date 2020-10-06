@@ -1,9 +1,9 @@
-#Expense Tracker
+# Expense Tracker
 
-##Introduction
+## Introduction
 An Expense Tracker app made using React hooks and context api. You can input your income and expenses and it will take the difference and show you the balance.
 
-##Live App Link
+## Live App Link
 https://github.com/javi-err/Expense-Tracker-front
 
 ##Technologies Used
