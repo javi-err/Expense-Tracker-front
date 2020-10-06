@@ -6,7 +6,7 @@ An Expense Tracker app made using React hooks and context api. You can input you
 ## Live App Link
 https://github.com/javi-err/Expense-Tracker-front
 
-##Technologies Used
+## Technologies Used
 * HTML5
 * CSS3
 * Javascript
